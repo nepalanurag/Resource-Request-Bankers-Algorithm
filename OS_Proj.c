@@ -7,11 +7,13 @@
   	int exct[10];
 	int flag=0,flag_safe=0;
 	int n,m,i,j,a[10],k,x=0;
-  char input[4];
+  char input[32];
   int reqmat[1][10];
   int ret,pid;
   int safety(int aloc[][10],int neede[][10],int avble[1][10],int n,int m,int exct[]){
 	int able[1][10];
+	flag_safe=0; // reset: this count belongs to this call only
+	x=0; // reset: the safe sequence is rebuilt from scratch
 	for(i=0;i<n;i++)
 		exct[i]=0;
 	for(i=0;i<m;i++)
@@ -194,6 +196,10 @@ int main(){
           printf("P%d",a[i]);
           if(i!=n-1) printf("--->");
         }
+      }
+	    else
+      {
+        printf("\n Request denied: granting it would leave the system in an unsafe state.\n");
       }
     } 
     else
