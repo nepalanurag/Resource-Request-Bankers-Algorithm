@@ -172,7 +172,7 @@ int main(){
 	}	
 
   ret=safety(alloc,need,avble,n,m,exct);
-  if(ret!=0)
+  if(ret==n)
   { printf("\n A safe sequence has been detected");
 	  again: printf("\nDo you want to request for any processes(YES||NO): ");
     scanf("%s",input);
@@ -188,7 +188,7 @@ int main(){
 		  scanf("%d",&pid);
 		  int check=res_request(alloc,need,avble,pid,m);
 		  if(check==-1)	goto again;
-	    if(check!=0)
+	    if(check==n)
       {
         printf("\n A safe sequence has been detected.No Deadlocks\n");
 		    for(i=0;i<n;i++)
