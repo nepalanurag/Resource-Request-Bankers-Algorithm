@@ -1,6 +1,6 @@
 # Banker's Algorithm
 
-An implementation of Dijkstra's Banker's algorithm for resource allocation and deadlock avoidance, written in C.
+An implementation of Dijkstra's Banker's algorithm for resource allocation and deadlock avoidance, written in C. I wrote it as coursework for my operating systems lab.
 
 The program simulates resource requests from several processes and grants a request only when the system stays in a safe state.
 
